@@ -51,7 +51,7 @@ public class PersonaController {
     @PostMapping("")
     public ResponseEntity<?> save(@RequestBody Persona entity){
         try {
-            System.out.println("Recibo los datos en el controlador" + entity.getNombre());
+            System.out.println("Recibo datos en el controlador" + entity.getNombre());
 
             return ResponseEntity.status(HttpStatus.OK).body(personaService.save(entity));
         }catch (Exception e){
